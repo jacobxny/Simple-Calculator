@@ -1,0 +1,426 @@
+import math
+import random
+
+while True:
+    rand0 = input("Mske a random number to use? ")
+
+    if rand0 == "yes":
+        x = random.randint(1, 10000)
+        print("Your random number is",x)
+        rand1 = rand0
+        break
+    
+    elif rand0 == "no":
+        rand1 = rand0
+        break
+    
+    else:
+        print("Error, input a yes/no. ")
+
+if rand1 == "yes":
+    while True:
+        square = input("Square this number. ")
+
+        if square == "yes":
+            square1 = square
+            break
+    
+        elif square == "no":
+            square1 = square
+            break
+
+        else:
+            print("Error, Enter a yes/no. ")
+
+    if square1 == "yes":
+        print(x ** 2)
+        quit()
+
+    elif square1 == "no":
+        while True:
+            power = input("Put this number to a power? ")
+        
+            if power == "yes":
+                power0 = power
+                break
+        
+            elif power == "no":
+                power0 = power
+                break
+
+            else:
+                print("Error, Enter a yes/no. ")
+
+    if power0 == "yes":
+        while True:
+            powernum = input("What number should this number be powered to? ")
+
+            try:
+                powernum = int(powernum)
+                print(x ** powernum)
+                break
+
+            except:
+                print("Error, input a number. ")
+    elif power0 == "no":
+        while True:
+            squareroot = input("How about square root? ")
+
+            if squareroot == "yes":
+                break
+
+            elif squareroot == "no":
+                break
+
+            else:
+                print("Error, Enter a yes/no. ")
+
+        if squareroot == "yes":
+            if x < 0:
+                print("Cant square root a negative number")
+                quit()
+            print(math.sqrt(x))
+
+        elif squareroot == "no":
+            while True:
+                rand = input("Make a random number to use? ")
+
+                if rand == "yes":
+                    y = random.randint(1, 10000)
+                    print("Your randon number is",y)
+                    rand2 = rand
+                    break
+        
+                elif rand == "no":
+                    rand2 = rand
+                    break
+                
+                else:
+                    print("Error, Enter a yes/no. ")
+        
+            if rand2 == "yes":
+            
+                while True:
+                    power3 = input("Put this number to a power/exponet? ")
+
+                    if power3 == "yes":
+                        power7 = power3
+                        break
+
+                    elif power3 == "no":
+                        power7 = power3
+                        break
+        
+                    else:
+                        print("Error, Enter a yes/no. ")
+
+                if power7 == "yes":
+                    while True:
+                        powernum = input("What number should this be powered to? ")
+
+                        try:
+                            powernum = int(powernum)
+                            print(y ** powernum)
+                            break
+                                
+                        except:
+                            print("Error, input a number. ")
+
+            if rand2 == "no":
+                while True:
+                    y = input("Enter a number. ")
+
+                    try:
+                        y = int(y)
+                        break
+        
+                    except:
+                        print("Error, input a number. ")
+        
+                while True:
+                    power3 = input("Put this number to a power? ")
+
+                    if power3 == "yes":
+                        power7 = power3 
+                        break
+
+                    elif power3 == "no":
+                        power7 = power3
+                        break
+
+                    else:
+                            print("Error, Input a yes/no ")
+            
+            if power7 == "yes":
+                while True:
+                    powernum = input("What number should this number be powered to? ")
+
+                    try:
+                        powernum = int(powernum)
+                        print(y ** powernum)
+                        break
+
+                    except:
+                        print("Error, Input a number ")
+            elif power7 == "no":
+                while True:
+                    operation = input("Enter a operation, e.g addition or subtraction. ")
+
+                    def add(x, y):
+                        return(x + y)
+                    def subtraction(x, y):
+                        return(x - y)
+                    def multiply(x, y):
+                        return(x * y)
+                    def division(x, y):
+                        return(x / y)
+                        
+                    if operation == "addition":
+                        print(add(x, y))
+                        break
+                    elif operation == "subtraction":
+                        print(subtraction(x, y))
+                        break
+                    elif operation == "multiplication":
+                        print(multiply(x, y))
+                        break
+                    elif operation == "division":
+                        if x == 0:
+                            print("Cant divide by zero. ")
+                            quit()
+                        if y == 0:
+                            print("Cant divide by zero. ")
+                            quit()
+                            
+                        print(division(x, y))
+                        break
+                    elif operation == "factorial":
+                        while True:
+                            factorial = input("Make the 1st or 2nd number a factorial. ")
+
+                            if factorial == "1st":
+                                print(math.factorial(x))
+                                break
+                            elif factorial == "2nd":
+                                print(math.factorial(y))
+                                break
+                            else:
+                                print("Enter 1st or 2nd to select the first or second number you inputed. ")
+                    elif operation == "compare":
+                        if x == y:
+                            print("The numbers are both equal since",x,"=",y)
+                        elif x > y:
+                            print("The first numbers is greater since",x,"is greater than",y)
+                        elif y > x:
+                            print("The second number is bigger since",y,"is greater than",x)
+                    else:
+                        print("Enter a valid operation. ")
+
+elif rand1 == "no":
+
+    while True:
+        x = input("Input a number. ")
+
+        try:
+            x = int(x)
+            break
+    
+        except:
+            print("Error, input a number. ")
+            pass
+
+    while True:
+        square = input("Square this number. ")
+
+        if square == "yes":
+            break
+    
+        elif square == "no":
+            break
+
+        else:
+            print("Error, Enter a yes/no. ")
+
+    if square == "yes":
+        print(x ** 2)
+        quit()
+
+    elif square == "no":
+        while True:
+            power = input("Put this number to a power? ")
+        
+            if power == "yes":
+                power5 = power
+                break
+        
+            elif power == "no":
+                power5 = power
+                break
+
+            else:
+                print("Error, Enter a yes/no. ")
+
+        if power5 == "yes":
+            while True:
+                powernum = input("What number should this number be powered to? ")
+
+                try:
+                    powernum = int(powernum)
+                    print(x ** powernum)
+                    break
+
+                except:
+                    print("Error, input a number. ")
+        elif power == "no":
+            while True:
+                squareroot = input("How about square root? ")
+
+                if squareroot == "yes":
+                    break
+
+                elif squareroot == "no":
+                    break
+
+                else:
+                    print("Error, Enter a yes/no. ")
+
+            if squareroot == "yes":
+                if x < 0:
+                    print("Cant square root a negative number")
+                    quit()
+                print(math.sqrt(x))
+
+            elif squareroot == "no":
+                while True:
+                    rand = input("Make a random number to use? ")
+
+                    if rand == "yes":
+                        y = random.randint(1, 10000)
+                        print("Your randon number is",y)
+                        rand2 = rand
+                        break
+        
+                    elif rand == "no":
+                        rand2 = rand
+                        break
+                
+                    else:
+                        print("Error, Enter a yes/no. ")
+        
+                if rand2 == "yes":
+            
+                    while True:
+                        power3 = input("Put this number to a power/exponet? ")
+
+                        if power3 == "yes":
+                            power2 = power3
+                            break
+
+                        elif power3 == "no":
+                            power2 = power3
+                            break
+        
+                        else:
+                            print("Error, Enter a yes/no. ")
+
+                    if power2 == "yes":
+                        while True:
+                            powernum = input("What number should this be powered to? ")
+
+                            try:
+                                powernum = int(powernum)
+                                print(y ** powernum)
+                                break
+                                
+                            except:
+                                print("Error, input a number. ")
+
+                elif rand2 == "no":
+                    while True:
+                        y = input("Enter a number. ")
+
+                        try:
+                            y = int(y)
+                            break
+        
+                        except:
+                            print("Error, input a number. ")
+        
+                    while True:
+                        power6 = input("Put this number to a power? ")
+
+                        if power6 == "yes":
+                            power2 = power6
+                            break
+
+                        elif power6 == "no":
+                            power2 = power6
+                            break
+
+                        else:
+                            print("Error, Input a yes/no ")
+            
+                if power2 == "yes":
+                    while True:
+                        powernum = input("What number should this number be powered to? ")
+
+                        try:
+                            powernum = int(powernum)
+                            print(y ** powernum)
+                            break
+
+                        except:
+                            print("Error, Input a number ")
+                    
+                elif power2 == "no":
+                    while True:
+                        operation = input("Enter an operation e.g addition or subtraction. ")
+
+                        def add(x, y):
+                            return(x + y)
+                        def subtract(x, y):
+                            return(x - y)
+                        def multiply(x, y):
+                            return(x * y)
+                        def division(x, y):
+                            return(x / y)
+                            
+                        if operation == "addition":
+                            print(add(x, y))
+                            break
+                        elif operation == "subtraction":
+                            print(subtract(x, y))
+                            break
+                        elif operation == "multiplication":
+                            print(multiply(x, y))
+                            break
+                        elif operation == "division":
+                            if x == 0:
+                                print("Cannot divide by zero. ")
+                                quit()
+                            if y == 0:
+                                print("cannot divide by zero. ")
+                                quit()
+                            print(division(x, y))
+                            break
+                        elif operation == "factorial":
+                            while True:
+                                factorial = input("Make the 1st or 2nd number a factorial. ")
+
+                                if factorial == "1st":
+                                    print(math.factorial(x))
+                                    break
+                                elif factorial == "2nd":
+                                    print(math.factorial(y))
+                                    break
+                                else:
+                                    print("Enter 1st or 2nd to select the first or second number you inputed. ")
+                        elif operation == "compare":
+                            if x == y:
+                                print("The numbers are both equal since",x,"=",y)
+                            elif x > y:
+                                print("The first numbers is greater since",x,"is greater than",y)
+                            elif y > x:
+                                print("The second number is bigger since",y,"is greater than",x)
+                        else:
+                            print("Enter a valid operation. ")
